@@ -1,48 +1,9 @@
-.editor {
-  max-width: 960px;
-  margin: 40px auto;
-  display: grid;
-  gap: 24px;
-}
-
-.card {
-  background: white;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 10px 18px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.primary {
-  background: #000;
-  color: white;
-}
-
-.chips span {
-  background: #eee;
-  padding: 8px 14px;
-  border-radius: 20px;
-  margin: 6px;
-  display: inline-block;
-}
-
+/* ===== PORTFOLIO BASE ===== */
 .portfolio {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 20px;
+  transition: background 0.3s, color 0.3s;
 }
 
 .hero {
@@ -54,14 +15,60 @@ button {
   font-size: 48px;
 }
 
+.tagline {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.chips span {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  margin: 6px;
+}
+
 .exp-card {
-  background: white;
   padding: 20px;
   border-radius: 14px;
   margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
-.muted {
-  color: #666;
+.theme-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-switch button {
+  margin-left: 6px;
+}
+
+/* ===== THEMES ===== */
+
+.portfolio.light {
+  background: #f8f8f8;
+  color: #111;
+}
+
+.portfolio.light .exp-card {
+  background: white;
+}
+
+.portfolio.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.portfolio.dark .exp-card {
+  background: #020617;
+}
+
+.portfolio.minimal {
+  background: white;
+  color: #000;
+}
+
+.portfolio.minimal .exp-card {
+  border: 1px solid #ddd;
 }
