@@ -10,8 +10,11 @@ export default function Home() {
       </p>
 
       <a
-  href="/editor/"
-  className="bg-black text-white px-6 py-3 rounded"
->
-  Get Started
-</a>
+        href="/editor/"
+        className="bg-black text-white px-6 py-3 rounded"
+      >
+        Get Started
+      </a>
+    </main>
+  );
+}
