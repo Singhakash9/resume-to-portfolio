@@ -7,14 +7,14 @@ export default function Home() {
         </h1>
 
         <p className="subtitle">
-          Build a modern, professional portfolio website — no templates, no guesswork.
+          Build a modern, professional portfolio website
         </p>
 
         <div className="cta-group">
           <a href="/editor/" className="primary-btn">
             Get Started
           </a>
-          <span className="hint">No sign-up required</span>
+
         </div>
       </div>
     </main>
