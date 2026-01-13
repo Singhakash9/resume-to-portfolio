@@ -1,20 +1,22 @@
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold mb-4">
-        Resume → Portfolio Generator
-      </h1>
+    <main className="home">
+      <div className="home-hero">
+        <h1>
+          Portfolio Generator
+        </h1>
 
-      <p className="mb-6 text-gray-600">
-        Upload your resume and generate a professional portfolio website
-      </p>
+        <p className="subtitle">
+          Build a modern, professional portfolio website — no templates, no guesswork.
+        </p>
 
-      <a
-        href="/editor/"
-        className="bg-black text-white px-6 py-3 rounded"
-      >
-        Get Started
-      </a>
+        <div className="cta-group">
+          <a href="/editor/" className="primary-btn">
+            Get Started
+          </a>
+          <span className="hint">No sign-up required</span>
+        </div>
+      </div>
     </main>
   );
 }

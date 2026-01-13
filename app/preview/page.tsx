@@ -30,7 +30,7 @@ export default function PreviewPage() {
         ))}
       </div>
 
-      <header className="hero">
+      <header className="hero card">
         <h1>{data.name}</h1>
         <h3>{data.title}</h3>
         <p>{data.location}</p>

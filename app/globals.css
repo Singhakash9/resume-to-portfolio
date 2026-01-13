@@ -239,3 +239,149 @@ button.primary {
   font-size: 14px;
 }
 
+/* ===============================
+   HOME PAGE
+   =============================== */
+
+   .home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .home-hero {
+    max-width: 900px;
+    text-align: center;
+    padding: 0 24px;
+  }
+  
+  .home-hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  
+  .home-hero h1 span {
+    color: #6366f1;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .primary-btn {
+    background: #111;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hint {
+    font-size: 13px;
+    color: #777;
+  }
+/* ===============================
+   PORTFOLIO THEMES
+   =============================== */
+
+   .portfolio {
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 16px;
+  }
+  
+  /* ---------- LIGHT ---------- */
+  .portfolio.light {
+    background: #ffffff;
+    color: #111;
+  }
+  
+  /* ---------- DARK (MODERN) ---------- */
+  .portfolio.dark {
+    background: #0f172a; /* deep slate */
+    color: #e5e7eb;
+  }
+  
+  .portfolio.dark h1,
+  .portfolio.dark h2,
+  .portfolio.dark h3 {
+    color: #f9fafb;
+  }
+  
+  .portfolio.dark p {
+    color: #cbd5f5;
+  }
+  
+  .portfolio.dark .card {
+    background: #111827;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* ---------- MINIMAL ---------- */
+  .portfolio.minimal {
+    background: #f8fafc;
+    color: #111;
+  }
+  
+  .portfolio.minimal .card {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+  }
+  
+  /* ===============================
+     THEME SWITCH
+     =============================== */
+  
+  .theme-switch {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .theme-switch button {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+  }
+  
+  .portfolio.dark .theme-switch button {
+    border-color: #334155;
+    color: #e5e7eb;
+  }
+  
+  /* ===============================
+     LINKS
+     =============================== */
+  
+  .portfolio a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .portfolio a:hover {
+    text-decoration: underline;
+  }
+    
