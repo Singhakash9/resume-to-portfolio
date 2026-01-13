@@ -4,43 +4,55 @@ import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark" | "minimal";
 
+/* ---------- SAFE ENCODING ---------- */
+const encodeData = (data: any) =>
+  encodeURIComponent(JSON.stringify(data));
+
+const decodeData = (data: string) =>
+  JSON.parse(decodeURIComponent(data));
+
 export default function PreviewPage() {
   const [data, setData] = useState<any>(null);
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const shared = params.get("data");
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const shared = params.get("data");
 
-    if (shared) {
-      const decoded = JSON.parse(atob(shared));
-      setData(decoded);
-      setTheme(decoded.theme || "light");
-      return;
-    }
+      if (shared) {
+        const decoded = decodeData(shared);
+        setData(decoded);
+        setTheme(decoded.theme || "light");
+        return;
+      }
 
-    const saved = localStorage.getItem("portfolioData");
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      setData(parsed);
-      setTheme(parsed.theme || "light");
+      const saved = localStorage.getItem("portfolioData");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setData(parsed);
+        setTheme(parsed.theme || "light");
+      }
+    } catch (err) {
+      console.error("Preview load error:", err);
     }
   }, []);
 
   if (!data) return <p>Nothing to preview</p>;
 
-  const shareLink = `${window.location.origin}/preview/?data=${btoa(
-    JSON.stringify({ ...data, theme })
-  )}`;
+  const shareLink = `${window.location.origin}/preview/?data=${encodeData({
+    ...data,
+    theme,
+  })}`;
 
   return (
     <div className={`portfolio ${theme}`}>
       {/* THEME SWITCH */}
       <div className="theme-switch">
-        {["light", "dark", "minimal"].map(t => (
+        {(["light", "dark", "minimal"] as Theme[]).map(t => (
           <button
             key={t}
-            onClick={() => setTheme(t as Theme)}
+            onClick={() => setTheme(t)}
             className={theme === t ? "active" : ""}
           >
             {t}
@@ -58,7 +70,7 @@ export default function PreviewPage() {
       <section>
         <h2>Skills</h2>
         <div className="chips">
-          {data.skills.map((s: string, i: number) => (
+          {(data.skills || []).map((s: string, i: number) => (
             <span key={i}>{s}</span>
           ))}
         </div>
@@ -68,7 +80,7 @@ export default function PreviewPage() {
       <section>
         <h2>Experience</h2>
         <div className="experience">
-          {data.experience.map((e: any, i: number) => (
+          {(data.experience || []).map((e: any, i: number) => (
             <div key={i} className="exp-card">
               <h3>{e.role}</h3>
               <strong>{e.company}</strong>
