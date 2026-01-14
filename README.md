@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resume → Portfolio
 
-## Getting Started
+This is not an advanced or heavily designed portfolio.
 
-First, run the development server:
+It is a simple, practical starting point for turning resume content into something that can be viewed and shared as a portfolio.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Why I Built This
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Most people already have the information needed for a portfolio:
+- A resume
+- A LinkedIn profile
+- A list of roles, skills, and projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+What they often don’t have is the time or clarity to turn that information into a presentable site.
 
-## Learn More
+I built this project to explore a straightforward question:
 
-To learn more about Next.js, take a look at the following resources:
+**What’s the simplest way to go from “I have a resume” to “I have something I can share”?**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## What This Project Is (and Isn’t)
 
-## Deploy on Vercel
+**This project is:**
+- Simple and minimal
+- Focused on structure and readability
+- Easy to understand and update
+- Intended as a starting point
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**This project is not:**
+- A fully customized or design-heavy portfolio
+- An advanced portfolio builder
+- A replacement for a handcrafted personal website
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Those trade-offs are intentional.
+
+---
+
+## What I Optimized For
+
+- **Clarity** — content is easy to scan
+- **Low friction** — minimal setup and decisions
+- **Logical structure** — sections align with how recruiters read profiles
+- **Maintainability** — easy to update as experience changes
+
+The UI is deliberately restrained so the content carries the weight.
+
+---
+
+## Try It Yourself
+
+This project is best understood by interacting with it.
+
+You can test the current version here:  
+👉 https://bf2cd572.resume-to-portfolio.pages.dev
+
+The experience focuses on structure and flow rather than advanced visuals.
+
+---
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Modern CSS
+
+The stack supports the goal: reliable, simple, and easy to extend.
+
+---
+
+## How This Could Evolve
+
+Some directions worth exploring:
+- Resume upload and basic parsing
+- Multiple layout options from the same data
+- Optional visual enhancements
+- Feedback based on recruiter interaction
+
+These were intentionally out of scope for this version.
+
+---
+
+## Why This Is in My GitHub
+
+This project reflects how I approach work:
+- Define the minimum useful outcome
+- Avoid unnecessary complexity
+- Ship something usable
+- Improve based on real feedback
+
+It’s intentionally modest — and intentionally finished.
